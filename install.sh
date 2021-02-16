@@ -23,7 +23,7 @@ fi
 UNAME_MACHINE="$(uname -m)"
 
 # Required installation paths. To install elsewhere (which is unsupported)
-# you can untar https://github.com/Homebrew/brew/tarball/master
+# you can untar https://github.fri.app/Homebrew/brew/tarball/master
 # anywhere you like.
 if [[ -z "${HOMEBREW_ON_LINUX-}" ]]; then
   if [[ "$UNAME_MACHINE" == "arm64" ]]; then
@@ -36,7 +36,7 @@ if [[ -z "${HOMEBREW_ON_LINUX-}" ]]; then
     HOMEBREW_REPOSITORY="${HOMEBREW_PREFIX}/Homebrew"
   fi
   HOMEBREW_CACHE="${HOME}/Library/Caches/Homebrew"
-  HOMEBREW_CORE_GIT_REMOTE="https://github.com/Homebrew/homebrew-core"
+  HOMEBREW_CORE_GIT_REMOTE="https://github.fri.app/Homebrew/homebrew-core"
 
   STAT="stat -f"
   CHOWN="/usr/sbin/chown"
@@ -48,7 +48,7 @@ else
   # and ~/.linuxbrew (which is unsupported) if run interactively.
   HOMEBREW_PREFIX_DEFAULT="/home/linuxbrew/.linuxbrew"
   HOMEBREW_CACHE="${HOME}/.cache/Homebrew"
-  HOMEBREW_CORE_GIT_REMOTE="https://github.com/Homebrew/linuxbrew-core"
+  HOMEBREW_CORE_GIT_REMOTE="https://github.fri.app/Homebrew/linuxbrew-core"
 
   STAT="stat --printf"
   CHOWN="/bin/chown"
@@ -56,7 +56,7 @@ else
   GROUP="$(id -gn)"
   TOUCH="/bin/touch"
 fi
-HOMEBREW_BREW_GIT_REMOTE="https://github.com/Homebrew/brew"
+HOMEBREW_BREW_GIT_REMOTE="https://github.fri.app/Homebrew/brew"
 
 # TODO: bump version when new macOS is released or announced
 MACOS_NEWEST_UNSUPPORTED="12.0"
@@ -64,7 +64,7 @@ MACOS_NEWEST_UNSUPPORTED="12.0"
 MACOS_OLDEST_SUPPORTED="10.14"
 
 # For Homebrew on Linux
-REQUIRED_RUBY_VERSION=2.6  # https://github.com/Homebrew/brew/pull/6556
+REQUIRED_RUBY_VERSION=2.6  # https://github.fri.app/Homebrew/brew/pull/6556
 REQUIRED_GLIBC_VERSION=2.13  # https://docs.brew.sh/Homebrew-on-Linux#requirements
 
 # no analytics during installation
@@ -367,7 +367,7 @@ if [[ -z "${HOMEBREW_ON_LINUX-}" ]]; then
   if version_lt "$macos_version" "10.7"; then
     abort "$(cat <<EOABORT
 Your Mac OS X version is too old. See:
-  ${tty_underline}https://github.com/mistydemeo/tigerbrew${tty_reset}
+  ${tty_underline}https://github.fri.app/mistydemeo/tigerbrew${tty_reset}
 EOABORT
 )"
   elif version_lt "$macos_version" "10.10"; then
@@ -406,7 +406,7 @@ echo "${HOMEBREW_PREFIX}/etc/bash_completion.d/brew"
 echo "${HOMEBREW_REPOSITORY}"
 
 # Keep relatively in sync with
-# https://github.com/Homebrew/brew/blob/master/Library/Homebrew/keg.rb
+# https://github.fri.app/Homebrew/brew/blob/master/Library/Homebrew/keg.rb
 directories=(bin etc include lib sbin share opt var
              Frameworks
              etc/bash_completion.d lib/pkgconfig
@@ -665,7 +665,7 @@ EOS
 
 ohai "Homebrew is run entirely by unpaid volunteers. Please consider donating:"
 echo "$(cat <<EOS
-  ${tty_underline}https://github.com/Homebrew/brew#donations${tty_reset}
+  ${tty_underline}https://github.fri.app/Homebrew/brew#donations${tty_reset}
 EOS
 )
 "
