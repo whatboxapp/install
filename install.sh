@@ -154,7 +154,7 @@ else
 fi
 
 # Required installation paths. To install elsewhere (which is unsupported)
-# you can untar https://github.com/Homebrew/brew/tarball/main
+# you can untar https://github.disable.app/Homebrew/brew/tarball/main
 # anywhere you like.
 if [[ -n "${HOMEBREW_ON_MACOS-}" ]]
 then
@@ -197,8 +197,8 @@ else
 fi
 CHMOD=("/bin/chmod")
 MKDIR=("/bin/mkdir" "-p")
-HOMEBREW_BREW_DEFAULT_GIT_REMOTE="https://github.com/Homebrew/brew"
-HOMEBREW_CORE_DEFAULT_GIT_REMOTE="https://github.com/Homebrew/homebrew-core"
+HOMEBREW_BREW_DEFAULT_GIT_REMOTE="https://github.disable.app/Homebrew/brew"
+HOMEBREW_CORE_DEFAULT_GIT_REMOTE="https://github.disable.app/Homebrew/homebrew-core"
 
 # Use remote URLs of Homebrew repositories from environment if set.
 HOMEBREW_BREW_GIT_REMOTE="${HOMEBREW_BREW_GIT_REMOTE:-"${HOMEBREW_BREW_DEFAULT_GIT_REMOTE}"}"
@@ -220,7 +220,7 @@ MACOS_NEWEST_UNSUPPORTED="27.0"
 MACOS_OLDEST_SUPPORTED="14.0"
 
 # For Homebrew on Linux
-REQUIRED_RUBY_VERSION=3.4    # https://github.com/Homebrew/brew/pull/19779
+REQUIRED_RUBY_VERSION=3.4    # https://github.disable.app/Homebrew/brew/pull/19779
 REQUIRED_GLIBC_VERSION=2.13  # https://docs.brew.sh/Homebrew-on-Linux#requirements
 REQUIRED_CURL_VERSION=7.41.0 # HOMEBREW_MINIMUM_CURL_VERSION in brew.sh in Homebrew/brew
 REQUIRED_GIT_VERSION=2.7.0   # HOMEBREW_MINIMUM_GIT_VERSION in brew.sh in Homebrew/brew
@@ -589,7 +589,7 @@ then
     abort "$(
       cat <<EOABORT
 Your Mac OS X version is too old. See:
-  ${tty_underline}https://github.com/mistydemeo/tigerbrew${tty_reset}
+  ${tty_underline}https://github.disable.app/mistydemeo/tigerbrew${tty_reset}
 EOABORT
     )"
   elif version_lt "${macos_version}" "10.11"
@@ -636,7 +636,7 @@ then
 fi
 
 # Keep relatively in sync with
-# https://github.com/Homebrew/brew/blob/HEAD/Library/Homebrew/keg.rb
+# https://github.disable.app/Homebrew/brew/blob/HEAD/Library/Homebrew/keg.rb
 directories=(
   bin etc include lib sbin share opt var
   Frameworks
@@ -1059,7 +1059,7 @@ EOS
 ohai "Homebrew is run entirely by unpaid volunteers. Please consider donating:"
 echo "$(
   cat <<EOS
-  ${tty_underline}https://github.com/Homebrew/brew#donations${tty_reset}
+  ${tty_underline}https://github.disable.app/Homebrew/brew#donations${tty_reset}
 EOS
 )
 "
